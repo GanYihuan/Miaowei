@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        a {
+            width: 17px;
+            height: 20px;
+            /*行高和高度一样则垂直居中*/
+            /*font:字体大小/行高 字体*/
+            font: 12px/20px "宋体";
+            border: 1px solid red;
+            /*使内联元素具备改变大小的能力*/
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: blue;
+        }
+
+        .pagebtn {
+            width: 64px;
+        }
+
+        a:hover {
+            background-color: blue;
+            color: #fff;
+        }
+    </style>
+
+    <!--
+    display:block
+        块元素特征:
+        独占一行
+        支持所有css样式
+        没有宽度时排满一行
+
+    display:inline
+        内联元素特征:
+        同排可跟同类元素
+        内容撑开大小
+        不支持宽高,margin
+        换行被解析
+
+    display:inline-block
+        块在一行显示
+        行内s属性标签支持宽高
+        没有宽高的时候内容撑开宽度
+    -->
+
+</head>
+<body>
+
+<div class="pagebox">
+    <a href="" class="pagebtn">A</a>
+    <a href="">1</a>
+    <a href="">1</a>
+    <a href="">1</a>
+    <a href="" class="pagebtn">B</a>
+</div>
+
+</body>
+</html>

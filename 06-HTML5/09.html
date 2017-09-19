@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>draggable</title>
+    <script>
+        window.onload = function () {
+            var aLi = document.getElementsByTagName('li');
+            for(var i = 0; i < aLi.length; i ++){
+//                拖拽开始触发
+                aLi[i].ondragstart = function () {
+
+                };
+
+//                拖拽过程连续触发
+                aLi[i].ondrag = function () {
+
+                };
+
+//                拖拽进入目标触发
+                aLi[i].ondragenter = function () {
+
+                };
+
+//                enter/leave连续触发
+                aLi[i].ondragover = function (ev) {
+                    ev.preventDefault();
+                };
+
+//                拖拽移出目标触发
+                aLi[i].ondragleave= function () {
+
+                };
+
+//                拖拽释放鼠标触发
+                aLi[i].ondrop= function () {
+//                    触发他要先阻止ondragover默认事件
+                };
+
+                //                拖拽结束触发
+                aLi[i].ondragend = function () {
+
+                };
+
+            }
+        };
+    </script>
+
+
+
+
+</head>
+<body>
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取自定义属性</title>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            alert(oDiv.dataset.miaovAll);
+        }
+    </script>
+    <!--defer延迟执行,b-c-a-文档-->
+    <script src="a" defer="defer"></script>
+    <script src="b"></script>
+    <script src="c"></script>
+
+    <!--async="async" 异步,一起执行-->
+    <script src="a" async="async"></script>
+    <script src="b" async="async"></script>
+    <script src="c" async="async"></script>
+
+</head>
+<body>
+
+    <div id="div1" data-miaov-All="miaov">div</div>
+
+</body>
+</html>

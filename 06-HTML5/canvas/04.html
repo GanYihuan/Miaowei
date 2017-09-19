@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #000;
+        }
+
+        #c1{
+            background: #fff;
+        }
+
+        span{
+            color: #000;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oC = document.getElementById('c1');
+            var oGC = oC.getContext('2d');
+            oGC.moveTo(200, 200);
+//            arc(x,y,r,起始弧度,结束弧度,旋转方向)
+//            3点钟为0度,6点钟为90度,9点钟为正负180,12点钟为-90度
+//            弧度 = 角度 * Math.PI / 180
+//            true逆时针
+            oGC.arc(200, 200, 150, 0, 90 * Math.PI/180, false);
+//            闭合起始和终点
+//            oGC.closePath();
+            oGC.stroke();
+
+        };
+    </script>
+
+</head>
+<body>
+<!--canvas的width,height要用行间样式-->
+<canvas id="c1" width="800" height="600">
+    <span>no surport</span>
+</canvas>
+</body>
+</html>

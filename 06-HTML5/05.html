@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--使ie兼容JSON的一些方法-->
+    <script src="json2.js"></script>
+    <script>
+        var a = {
+            name: {age: 100}
+        };
+
+//        如何解决值传递时,各个对象互不影响的问题
+//        以下方式无法应对双重以上的json嵌套模式
+//        var b = {};
+//        for(var attr in a){
+//            b[attr] = a[attr];
+//        }
+        var str = JSON.stringify(a);
+        var b = JSON.parse(str);
+
+        b.name.age = 200;
+
+        alert(a.name.age);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

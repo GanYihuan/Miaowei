@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #000;
+        }
+
+        #c1{
+            background: #fff;
+        }
+
+        span{
+            color: #000;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oC = document.getElementById('c1');
+            var oGC = oC.getContext('2d');
+            oGC.fillRect(0, 0, 100, 100);
+            var num = 0;
+
+            setInterval(function () {
+                num ++;
+                oGC.clearRect(0, 0, oC.width, oC.height);
+                oGC.fillRect(num, num, 100, 100);
+            },30);
+        };
+    </script>
+
+</head>
+<body>
+<!--canvas的width,height要用行间样式-->
+    <canvas id="c1" width="800" height="600">
+        <span>no surport</span>
+    </canvas>
+</body>
+</html>

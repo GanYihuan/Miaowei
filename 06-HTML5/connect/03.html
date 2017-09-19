@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同一个域</title>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn1');
+            var oBtn2 = document.getElementById('btn2');
+            var newWindow = null;
+
+            oBtn.onclick = function () {
+                newWindow = window.open('01.html', '_bank');
+            };
+
+            oBtn2.onclick = function () {
+                newWindow.document.body.style.background = 'red';
+            };
+        };
+    </script>
+</head>
+<body>
+
+    <input type="button" id="btn1" value="click 1">
+    <input type="button" id="btn2" value="click 2">
+
+</body>
+</html>

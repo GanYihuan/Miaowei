@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width: 100px;
+            height: 30px;
+            color: #000;
+        }
+
+        input:enabled{
+            color: red;
+        }
+
+        input:disabled{
+            color: blue;
+        }
+
+        input:checked{
+            width: 500px;
+        }
+
+        /*p后面的h1*/
+        p~h1{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <input type="text" value="input" disabled>
+    <input type="checkbox">
+
+    <h1>h1</h1>
+    <h1>h1</h1>
+    <p>p1</p>
+    <h1>h1</h1>
+    <h1>h1</h1>
+
+</body>
+</html>
