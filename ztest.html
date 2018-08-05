@@ -5,42 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <style>
-    .box {
-      width: 400px;
-      border: 1px solid #000;
-      overflow: hidden;
-    }
-
-    .left {
-      float: left;
-      background-color: red;
-    }
-
-    .right {
-      float: right;
-      background-color: blue;
-    }
-
-    h2 {
-      /*h2块元素,为了有float效果,也要跟着上面父类加float*/
-      float: left;
-      margin: 0;
-      height: 30px;
-    }
-  </style>
-  <!--
-  元素浮动后,能设置宽度的就给其加上宽度,如果需要宽带是内容撑开的,就给他加float
-  -->
 </head>
-<body id="body1">
-  <div class="box">
-    <div class="left">
-      <h2>left</h2>
-    </div>
-    <div class="right">
-      <h2>right</h2>
-    </div>
-  </div>
+<body>
+  <header>页面头部</header>
+  <nav>导航</nav>
+  <footer>脚部</footer>
+  <section>板块</section>
+  <!--帖子,文章-->
+  <article>完整内容部分</article>
+  <!--与article相关-->
+  <aside>和主体相关附属信息</aside>
+  <!--<figcaption> 标签定义 <figure> 元素的标题.-->
+  <!--<figure>标签规定独立的流内容（图像、图表、照片、代码等等）。-->
+  <!--图片或视频-->
+  <figure></figure>
 </body>
 </html>
