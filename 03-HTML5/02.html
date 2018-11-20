@@ -48,8 +48,8 @@
     <input type="submit" formaction="http://www.miaov.com">
   </form>
 
-  <hr/>
-  <hr/>
+  <hr />
+  <hr />
 
   <form>
     <input type="text" required id="text">
@@ -59,7 +59,7 @@
     var oTxt = document.getElementById('text');
     oTxt.addEventListener('invalid', fn, false);
     oTxt.oninput = function () {
-      if (this.value == '土共') {
+      if (this.value == 'a') {
         this.setCustomValidity('敏感词');
       } else {
         setCustomValidity("");
