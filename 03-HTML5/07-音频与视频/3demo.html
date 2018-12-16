@@ -5,7 +5,6 @@
   <title>无标题文档</title>
   <script>
     window.onload = function () {
-
       var oV = document.getElementById('v1');
       var oInput = document.getElementById('input1');
       var aS = document.getElementsByTagName('source');
@@ -19,27 +18,27 @@
       };
 
       oInput.onclick = function () {
-
         aS[0].src = 'xxxx.mp4';
         aS[1].src = 'yyyy.mp4';
-
         oV.load();
-
       };
-
     };
   </script>
 </head>
-
 <body>
+  <!--
+  paused  :   媒体是否暂停(只读)
+  ended   :   媒体是否播放完毕(只读)
+  error   :  媒体发生错误的时候，返回错误代码 (只读)
+  currentSrc  :   以字符串的形式返回媒体地址(只读)
+  play()  :  媒体播放
+  pause()  :  媒体暂停
+  load()  :  重新加载媒体
+  -->
   <input type="button" value="重新加载" id="input1" />
   <video id="v1">
-
-    <source src="Intermission-Walk-in.ogv">
-    </source>
-    <source src="Intermission-Walk-in_512kb.mp4">
-    </source>
-
+    <source src="Intermission-Walk-in.ogv"></source>
+    <source src="Intermission-Walk-in_512kb.mp4"></source>
   </video>
 </body>
 </html>
