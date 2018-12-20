@@ -1,3 +1,7 @@
-父级.insertBefore(新的元素，被插入的元素) 方法 在指定元素前面插入一个新元素
-在ie下如果第二个参数的节点不存在，会报错
-在其他标准浏览器下如果第二个参数的节点不存在，则会以appendChild的形式进行添加
+document.onkeydown = function() {
+  return false;
+};
+// oncontextmenu : 右键菜单事件，当右键菜单（环境菜单）显示出来的时候触发
+document.oncontextmenu = function() {
+  return false;
+};
