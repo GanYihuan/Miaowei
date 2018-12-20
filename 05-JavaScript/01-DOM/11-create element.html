@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>元素创建操作</title>
 </head>
 <body id="body1">
   <input type="text" id="text1" />
@@ -21,9 +21,7 @@
         document.createElement(标签名称); 创建元素
         */
         let oLi = document.createElement('li');
-        // oLi.innerHTML = oText.value + '<a href="javascript:;">删除</a>';
         oLi.innerHTML = oText.value;
-
         let oA = document.createElement('a');
         oA.innerHTML = '删除';
         oA.href = 'javascript:;';
@@ -33,6 +31,7 @@
           */
           oUl.removeChild(this.parentNode);
         }
+
         // 添加到页面中
         /*
         父级.appendChild(要添加的元素) 方法 追加子元素
