@@ -10,13 +10,10 @@
       // this
     }
     fn1(); // this => window
-
     oDiv.onclick = fn1; // this => oDiv
-   
     oDiv.onclick = function (){
       fn1(); // fn1() 里的 this => window
     };
-    
     <div onclick="fn1(this);"></div> // fn1(); 里的 this 指的是 window
 
     // alert(this);		// object window
