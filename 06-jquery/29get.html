@@ -5,11 +5,11 @@
   <title>无标题文档</title>
   <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
   <script>
-    //get() : 就是把JQ转成原生JS
+    // get() : 就是把JQ转成原生JS
     $(function () {
-      //document.getElementById('div1').innerHTML
+      // document.getElementById('div1').innerHTML
       // get(0) 集合中第一个元素
-      //alert( $('#div1').get(0).innerHTML );
+      alert($('#div1').get(0).innerHTML);
       /*
       for(var i=0;i<$('li').get().length;i++){
         $('li').get(i).style.background = 'red';
@@ -17,7 +17,7 @@
       */
       for (var i = 0; i < $('li').length; i++) {
         $('li').get(i).style.background = 'red';
-        //$('li')[i].style.background = 'red';
+        // $('li')[i].style.background = 'red';
       }
     });
   </script>

@@ -7,15 +7,20 @@
   <script>
     $(function () {
       $('div').click(function(ev){
-        //ev: event对象
-        //ev.pageX(相对于文档的): clientX(相对于可视区)
-        //ev.which: keyCode
-        ev.preventDefault();  //阻止默认事件
-        ev.stopPropagation();  //阻止冒泡的操作
-        return false;   //阻止默认事件 + 阻止冒泡的操作
+        // ev: event 对象
+        // ev.pageX(相对于文档的): clientX(相对于可视区)
+        // ev.which: keyCode
+        ev.preventDefault(); // 阻止默认事件
+        ev.stopPropagation(); // 阻止冒泡的操作
+        return false;  // 阻止默认事件 + 阻止冒泡的操作
       });
-      $('div').one('click', function () {  //只执行事件一次
+      $('div').one('click', function () { // 只执行事件一次
         alert(123);
+      });
+      $('#div1').on('click', { name: 'hello' }, function (ev) {
+        // alert(ev.data.name);
+        // alert(ev.target);
+        alert(ev.type);
       });
     });
   </script>
