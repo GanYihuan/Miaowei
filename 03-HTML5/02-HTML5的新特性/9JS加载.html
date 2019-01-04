@@ -1,21 +1,19 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>延迟加载JS</title>
-  <!-- defer : 延迟加载，会按顺序执行，在 onload 执行前被触发 -->
-  <!--
-  <script src="a.js" defer="defer"></script>
-  <script src="b.js" defer="defer"></script>
-  <script src="c.js" defer="defer"></script>
-  -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>延迟加载JS</title>
+    <!-- defer : 延迟加载，会按顺序执行，在 onload 执行前被触发 -->
+    <script src="a.js" defer="defer"></script>
+    <script src="b.js" defer="defer"></script>
+    <script src="c.js" defer="defer"></script>
 
-  <!-- async : 异步加载，加载完就触发，有顺序问题 -->
-  <script src="a.js" async="async"></script>
-  <script src="b.js" async="async"></script>
-  <script src="c.js" async="async"></script>
-</head>
-<body>
-  <img src="">
-</body>
+    <!-- async : 异步加载，加载完就触发，有顺序问题 -->
+    <script src="a.js" async="async"></script>
+    <script src="b.js" async="async"></script>
+    <script src="c.js" async="async"></script>
+  </head>
+  <body>
+    <img src="" />
+  </body>
 </html>

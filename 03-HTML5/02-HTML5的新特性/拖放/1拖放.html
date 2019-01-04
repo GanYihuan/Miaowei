@@ -29,7 +29,8 @@
             this.style.background = "green";
           };
 
-          aLi[i].ondrag = function(){  //开始与结束连续触发
+          aLi[i].ondrag = function() {
+            // 开始与结束连续触发
             document.title = i++;
           };
 
@@ -43,9 +44,9 @@
         };
 
         oDiv.ondragover = function(ev) {
-          //enter和leave之间连续触发
-          //要想触发drop事件，就 必须在dragover当中阻止默认事件
-          //document.title = i++;
+          // enter和leave之间连续触发
+          // 要想触发drop事件，就 必须在dragover当中阻止默认事件
+          // document.title = i++;
           ev.preventDefault();
         };
 

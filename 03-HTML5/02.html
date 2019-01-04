@@ -1,82 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-  <form action="www.baidu.com">
-    <input type="email">
-    <input type="submit">
-    <input type="url">
-    <input type="search">
-    <input type="range" step="2" min="0" value="10">
-    <input type="number">
-    <input type="color">
-    <input type="time">
-    <input type="datetime">
-    <input type="datetime-local">
-    <input type="date">
-    <input type="week">
-    <input type="month">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form action="www.baidu.com">
+      <input type="email" /> <input type="submit" /> <input type="url" />
+      <input type="search" />
+      <input type="range" step="2" min="0" value="10" />
+      <input type="number" /> <input type="color" /> <input type="time" />
+      <input type="datetime" /> <input type="datetime-local" />
+      <input type="date" /> <input type="week" /> <input type="month" />
 
-    <input type="text" placeholder="ganyihuan" value="hello">
-    <input type="text" autocomplete="off">
-    <input type="text" autofocus>
+      <input type="text" placeholder="ganyihuan" value="hello" />
+      <input type="text" autocomplete="off" /> <input type="text" autofocus />
 
-    <!--下拉菜单-->
-    <input type="text" list="a">
-    <datalist id="a">
-      <option value="js">js</option>
-      <option value="css">css</option>
-      <option value="html">html</option>
-    </datalist>
+      <!--下拉菜单-->
+      <input type="text" list="a" />
+      <datalist id="a">
+        <option value="js">js</option>
+        <option value="css">css</option>
+        <option value="html">html</option>
+      </datalist>
 
-    <!--详细信息-->
-    <details>
-      <summary>miaov</summary>
-      <p>it training</p>
-    </details>
+      <!--详细信息-->
+      <details>
+        <summary>miaov</summary>
+        <p>it training</p>
+      </details>
 
-    <progress max="200" value="150">
-      <span>75</span>%
-    </progress>
+      <progress max="200" value="150"> <span>75</span>% </progress>
 
-    <input type="text" required>
-    <input type="text" pattern="/d{1,5}/">
-    <!--不通过校验就提交,一般用于提交到草稿箱-->
-    <input type="submit" formaction="http://www.miaov.com">
-  </form>
+      <input type="text" required /> <input type="text" pattern="/d{1,5}/" />
+      <!--不通过校验就提交,一般用于提交到草稿箱-->
+      <input type="submit" formaction="http://www.miaov.com" />
+    </form>
 
-  <hr />
-  <hr />
+    <hr />
+    <hr />
 
-  <form>
-    <input type="text" required id="text">
-    <input type="submit" value="保存至草稿箱" formnovalidate formaction="http://www.baidu.com">
-  </form>
-  <script>
-    var oTxt = document.getElementById('text');
-    oTxt.addEventListener('invalid', fn, false);
-    oTxt.oninput = function () {
-      if (this.value == 'a') {
-        this.setCustomValidity('敏感词');
-      } else {
-        setCustomValidity("");
+    <form>
+      <input type="text" required id="text" />
+      <input
+        type="submit"
+        value="保存至草稿箱"
+        formnovalidate
+        formaction="http://www.baidu.com"
+      />
+    </form>
+    <script>
+      var oTxt = document.getElementById("text");
+      oTxt.addEventListener("invalid", fn, false);
+      oTxt.oninput = function() {
+        if (this.value == "a") {
+          this.setCustomValidity("敏感词");
+        } else {
+          setCustomValidity("");
+        }
+      };
+
+      function fn(ev) {
+        alert(this.validity.valid);
+        ev.preventDefault();
       }
-    };
-
-    function fn(ev) {
-      alert(this.validity.valid);
-      ev.preventDefault();
-    }
-//    以下属性放回true,valid则返回false
-//  this.validity.valueMissing  值不存在时返回true
-//  this.validity.typeMissing  值不匹配时返回true,如email
-//  this.validity.pattemMissing  值不匹配正则表达式时返回true
-//  this.validity.tooLong  值超过maxLength
-//  this.validity.customError  不符合自定义验证返回true
-
-  </script>
-</body>
+      //    以下属性放回true,valid则返回false
+      //  this.validity.valueMissing  值不存在时返回true
+      //  this.validity.typeMissing  值不匹配时返回true,如email
+      //  this.validity.pattemMissing  值不匹配正则表达式时返回true
+      //  this.validity.tooLong  值超过maxLength
+      //  this.validity.customError  不符合自定义验证返回true
+    </script>
+  </body>
 </html>
