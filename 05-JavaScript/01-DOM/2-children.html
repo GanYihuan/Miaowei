@@ -16,14 +16,14 @@
     </ul>
     <script>
       window.onload = function() {
-        var oUl = document.getElementById("ul1");
+        let oUl = document.getElementById("ul1");
         /*
-      	元素.children : 只读 属性 子节点列表集合
-        标准下：只包含元素类型的节点
-        非标准下：只包含元素类型的节点
+      	element.children: 只读属性, 子节点列表集合
+        标准下：元素类型的节点
+        非标准下：元素类型的节点
         */
         // alert( oUl.children.length );
-        for (var i = 0; i < oUl.children.length; i++) {
+        for (let i = 0; i < oUl.children.length; i++) {
           oUl.children[i].style.background = "red";
         }
       };
