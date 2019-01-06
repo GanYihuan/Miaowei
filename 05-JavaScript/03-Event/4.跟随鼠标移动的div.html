@@ -20,7 +20,8 @@
         document.onmousemove = function(ev) {
           // document.title = i++;
           var ev = ev || event;
-          var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          var scrollTop =
+            document.documentElement.scrollTop || document.body.scrollTop;
           oDiv.style.left = ev.clientX + "px";
           oDiv.style.top = ev.clientY + scrollTop + "px";
         };
