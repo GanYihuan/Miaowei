@@ -32,17 +32,15 @@
         // alert( ev );
         var ev = ev || event;
         // alert(ev);
-
         /*
         for ( var attr in ev ) {
           console.log( attr + ' = ' + ev[attr] );
         }
         */
-
         alert(ev.clientX);
       }
 
-      // fn1();	//不是事件调用的函数
+      // fn1();	// 不是事件调用的函数
       document.onclick = fn1; // 是事件调用的函数，所以event有内容
     </script>
   </head>

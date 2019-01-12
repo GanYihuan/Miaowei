@@ -22,7 +22,6 @@
           var disX = ev.clientX;
           var disL = this.offsetLeft;
           var b = "";
-
           if (disX > disL + disW - 10) {
             // alert( 'right' );
             b = "right";
@@ -31,7 +30,6 @@
             // alert( 'left' );
             b = "left";
           }
-
           document.onmousemove = function(ev) {
             var ev = ev || event;
             switch (b) {
@@ -44,11 +42,9 @@
                 break;
             }
           };
-
           document.onmouseup = function() {
             document.onmousemove = document.onmouseup = null;
           };
-
           return false;
         };
       };

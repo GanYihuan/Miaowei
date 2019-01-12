@@ -4,9 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
     <script>
-      var obj = {
-        a: { b: 10 }
-      };
       /*
       // 浅拷贝
       function copy(obj){
@@ -18,6 +15,9 @@
       }
       */
       // 深拷贝
+      var obj = {
+        a: { b: 10 }
+      };
       function deepCopy(obj) {
         if (typeof obj !== "object") {
           console.trace();

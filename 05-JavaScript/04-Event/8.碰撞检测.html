@@ -28,16 +28,13 @@
             var ev = ev || event;
             var disX = ev.clientX - this.offsetLeft;
             var disY = ev.clientY - this.offsetTop;
-
             if (obj.setCapture) {
               obj.setCapture();
             }
-
             document.onmousemove = function(ev) {
               var ev = ev || event;
               var L = ev.clientX - disX;
               var T = ev.clientY - disY;
-
               var L1 = L;
               var R1 = L + obj.offsetWidth;
               var T1 = T;
@@ -51,18 +48,15 @@
               } else {
                 oImg.src = "2.jpg";
               }
-
               obj.style.left = L + "px";
               obj.style.top = T + "px";
             };
-
             document.onmouseup = function() {
               document.onmousemove = document.onmouseup = null;
               if (obj.releaseCapture) {
                 obj.releaseCapture();
               }
             };
-
             return false;
           };
         }
