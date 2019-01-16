@@ -24,25 +24,25 @@
       // sessionStorage数据是不共享、 localStorage共享
 
       window.onload = function() {
-        var aInput = document.getElementsByTagName("input");
+        var aInput = document.getElementsByTagName('input')
 
         aInput[0].onclick = function() {
           //sessionStorage : 临时性存储
           //localStorage : 永久性存储
           //window.sessionStorage.setItem('name',aInput[3].value);
-          window.localStorage.setItem("name", aInput[3].value);
-        };
+          window.localStorage.setItem('name', aInput[3].value)
+        }
 
         aInput[1].onclick = function() {
           //alert(window.sessionStorage.getItem('name'));
-          alert(window.localStorage.getItem("name"));
-        };
+          alert(window.localStorage.getItem('name'))
+        }
 
         aInput[2].onclick = function() {
-          window.localStorage.removeItem("name");
+          window.localStorage.removeItem('name')
           //window.localStorage.clear();  //删除全部数据
-        };
-      };
+        }
+      }
     </script>
   </head>
   <body>

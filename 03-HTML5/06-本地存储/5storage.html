@@ -5,41 +5,41 @@
     <title>无标题文档</title>
     <script>
       window.onload = function() {
-        var aInput = document.getElementsByTagName("input");
-        var oT = document.getElementById("t1");
+        var aInput = document.getElementsByTagName('input')
+        var oT = document.getElementById('t1')
 
-        if (window.localStorage.getItem("name")) {
-          aInput[0].value = window.localStorage.getItem("name");
+        if (window.localStorage.getItem('name')) {
+          aInput[0].value = window.localStorage.getItem('name')
         }
 
-        if (window.localStorage.getItem("sex")) {
+        if (window.localStorage.getItem('sex')) {
           for (var i = 1; i < aInput.length; i++) {
-            if (aInput[i].value == window.localStorage.getItem("sex")) {
-              aInput[i].checked = true;
+            if (aInput[i].value == window.localStorage.getItem('sex')) {
+              aInput[i].checked = true
             }
           }
         }
 
-        if (window.localStorage.getItem("ta")) {
-          oT.value = window.localStorage.getItem("ta");
+        if (window.localStorage.getItem('ta')) {
+          oT.value = window.localStorage.getItem('ta')
         }
 
         window.onunload = function() {
           if (aInput[0].value) {
-            window.localStorage.setItem("name", aInput[0].value);
+            window.localStorage.setItem('name', aInput[0].value)
           }
 
           for (var i = 1; i < aInput.length; i++) {
             if (aInput[i].checked == true) {
-              window.localStorage.setItem("sex", aInput[i].value);
+              window.localStorage.setItem('sex', aInput[i].value)
             }
           }
 
           if (oT.value) {
-            window.localStorage.setItem("ta", oT.value);
+            window.localStorage.setItem('ta', oT.value)
           }
-        };
-      };
+        }
+      }
     </script>
   </head>
   <body>

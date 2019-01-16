@@ -5,39 +5,39 @@
     <title>Title</title>
     <script>
       window.onload = function() {
-        var oInput = document.getElementById("input1");
-        var oDiv = document.getElementById("div1");
-        var json = {};
+        var oInput = document.getElementById('input1')
+        var oDiv = document.getElementById('div1')
+        var json = {}
 
         oInput.onclick = function() {
-          var num = Math.random();
-          var arr = randomNum(35, 7);
-          json[num] = arr;
-          oDiv.innerHTML = arr;
+          var num = Math.random()
+          var arr = randomNum(35, 7)
+          json[num] = arr
+          oDiv.innerHTML = arr
           //                刷新hash值,地址栏
-          window.location.hash = num;
-        };
+          window.location.hash = num
+        }
 
         //            刷新页面
         window.onhashchange = function() {
-          oDiv.innerHTML = json[window.location.hash.substring(1)];
-        };
+          oDiv.innerHTML = json[window.location.hash.substring(1)]
+        }
 
         function randomNum(iAll, iNow) {
-          var arr = [];
-          var newArr = [];
+          var arr = []
+          var newArr = []
 
           for (var i = 1; i <= iAll; i++) {
-            arr.push(i);
+            arr.push(i)
           }
 
           for (var i = 0; i < iNow; i++) {
-            newArr.push(arr.splice(Math.floor(Math.random() * arr.length), 1));
+            newArr.push(arr.splice(Math.floor(Math.random() * arr.length), 1))
           }
 
-          return newArr;
+          return newArr
         }
-      };
+      }
     </script>
   </head>
   <body>

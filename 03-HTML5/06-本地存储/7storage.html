@@ -5,39 +5,39 @@
     <title>无标题文档</title>
     <script>
       window.onload = function() {
-        var aInput = document.getElementsByTagName("input");
+        var aInput = document.getElementsByTagName('input')
 
         for (var i = 0; i < aInput.length; i++) {
           aInput[i].onclick = function() {
             if (this.checked) {
-              window.localStorage.setItem("sel", this.value);
+              window.localStorage.setItem('sel', this.value)
             } else {
-              window.localStorage.setItem("onSel", this.value);
+              window.localStorage.setItem('onSel', this.value)
             }
-          };
+          }
         }
 
         window.addEventListener(
-          "storage",
+          'storage',
           function(ev) {
             //当前页面的事件不会触发
-            if (ev.key == "sel") {
+            if (ev.key == 'sel') {
               for (var i = 0; i < aInput.length; i++) {
                 if (ev.newValue == aInput[i].value) {
-                  aInput[i].checked = true;
+                  aInput[i].checked = true
                 }
               }
-            } else if (ev.key == "onSel") {
+            } else if (ev.key == 'onSel') {
               for (var i = 0; i < aInput.length; i++) {
                 if (ev.newValue == aInput[i].value) {
-                  aInput[i].checked = false;
+                  aInput[i].checked = false
                 }
               }
             }
           },
           false
-        );
-      };
+        )
+      }
     </script>
   </head>
 
