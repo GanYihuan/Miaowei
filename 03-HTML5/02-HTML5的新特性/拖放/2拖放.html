@@ -20,57 +20,53 @@
     </style>
     <script>
       window.onload = function() {
-        var oUl = document.getElementsByTagName("ul")[0];
-        var aLi = oUl.getElementsByTagName("li");
-        var oDiv = document.getElementById("div1");
-        var i = 0;
+        var oUl = document.getElementsByTagName('ul')[0]
+        var aLi = oUl.getElementsByTagName('li')
+        var oDiv = document.getElementById('div1')
+        var i = 0
 
         for (var i = 0; i < aLi.length; i++) {
-          aLi[i].index = i;
-
+          aLi[i].index = i
           aLi[i].ondragstart = function(ev) {
-            var ev = ev || window.event;
-            // 解决火狐下的问题 必须设置dataTransfer对象才可以拖拽除图片外的其他标签
-            //ev.dataTransfer.setData('name','hello');
-            ev.dataTransfer.setData("name", this.index);
-            this.style.background = "green";
-          };
+            var ev = ev || window.event
+            // 解决火狐下的问题 必须设置 dataTransfer 对象才可以拖拽除图片外的其他标签
+            ev.dataTransfer.setData('name', this.index)
+            // 设置光标样式
+            ev.dataTransfer.effectAllowed = 'link'
+            this.style.background = 'green'
+          }
 
-          /*
-          aLi[i].ondrag = function(){  //开始与结束连续触发
-            document.title = i++;
-          };
-          */
+          // 开始与结束连续触发
+          aLi[i].ondrag = function() {
+            document.title = i++
+          }
 
           aLi[i].ondragend = function() {
-            this.style.background = "yellow";
-          };
+            this.style.background = 'yellow'
+          }
         }
 
         oDiv.ondragenter = function() {
-          this.style.background = "blue";
-        };
+          this.style.background = 'blue'
+        }
 
         oDiv.ondragover = function(ev) {
-          //enter和leave之间连续触发
-          //要想触发drop事件，就 必须在dragover当中阻止默认事件
-          //document.title = i++;
-          ev.preventDefault();
-        };
+          // enter 和 leave 之间连续触发
+          // 要想触发 drop 事件，就 必须在 dragover 当中阻止默认事件
+          ev.preventDefault()
+        }
 
         oDiv.ondragleave = function() {
-          this.style.background = "red";
-        };
+          this.style.background = 'red'
+        }
 
         oDiv.ondrop = function(ev) {
-          //alert(123);
-          //alert( ev.dataTransfer.getData('name') );
-          oUl.removeChild(aLi[ev.dataTransfer.getData("name")]);
+          oUl.removeChild(aLi[ev.dataTransfer.getData('name')])
           for (var i = 0; i < aLi.length; i++) {
-            aLi[i].index = i;
+            aLi[i].index = i
           }
-        };
-      };
+        }
+      }
     </script>
   </head>
   <body>

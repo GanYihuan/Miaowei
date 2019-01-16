@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form action="www.baidu.com">
+      <input type="email">
+      <input type="tel">
+      <input type="url">
+      <input type="search">
+      <input type="range" step="2" min="0" value="10">
+      <input type="number">
+      <input type="color">
+      <input type="time">
+      <input type="datetime">
+      <input type="datetime-local">
+      <input type="date">
+      <input type="week">
+      <input type="mounth">
+      <input type="text"
+        placeholder=""
+        name="user"
+        autocomplete="off"
+        autofocus
+        value="hello"
+        required
+        pattern="\d{1,5}"
+        maxlength="5"
+        formnovalidate
+      >
+      <!-- formnovalidate 属性: 关闭验证 -->
+      <!--不通过校验就提交,一般用于提交到草稿箱-->
+      <input type="submit" formaction="http://www.miaov.com" />
+    </form>
+    <script>
+      var oTxt = document.getElementById('text')
+      oText.value = '123456789'
+      oTxt.addEventListener('invalid', fn, false)
+
+      function fn(ev) {
+        alert(this.validity.customError)
+        //  以下属性放回 true, valid 则返回 false
+        //  this.validity.valueMissing  值不存在时返回true
+        //  this.validity.typeMissing  值不匹配时返回true,如email
+        //  this.validity.pattemMissing  值不匹配正则表达式时返回true
+        //  this.validity.tooLong  值超过maxLength
+        //  this.validity.customError  不符合自定义验证返回true
+        ev.preventDefault()
+      }
+
+      oTxt.oninput = function() {
+        if (this.value == 'a') {
+          this.setCustomValidity('敏感词')
+        } else {
+          setCustomValidity('')
+        }
+      }
+    </script>
+  </body>
+</html>

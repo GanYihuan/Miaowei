@@ -13,38 +13,38 @@
     </style>
     <script>
       window.onload = function() {
-        var oDiv = document.getElementById("div1");
+        var oDiv = document.getElementById('div1')
 
         oDiv.ondragenter = function() {
-          this.innerHTML = "可以释放啦";
-        };
+          this.innerHTML = '可以释放啦'
+        }
 
         oDiv.ondragover = function(ev) {
-          ev.preventDefault();
-        };
+          ev.preventDefault()
+        }
 
         oDiv.ondragleave = function() {
-          this.innerHTML = "将文件拖拽到此区域";
-        };
+          this.innerHTML = '将文件拖拽到此区域'
+        }
 
         oDiv.ondrop = function(ev) {
-          ev.preventDefault();
+          ev.preventDefault()
 
-          var fs = ev.dataTransfer.files;
+          var fs = ev.dataTransfer.files
 
           //alert(fs.length);
 
           //alert( fs[0].type );
 
-          var fd = new FileReader();
+          var fd = new FileReader()
 
-          fd.readAsDataURL(fs[0]);
+          fd.readAsDataURL(fs[0])
 
           fd.onload = function() {
-            alert(this.result);
-          };
-        };
-      };
+            alert(this.result)
+          }
+        }
+      }
     </script>
   </head>
 

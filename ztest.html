@@ -7,17 +7,41 @@
   <title>Document</title>
 </head>
 <body>
-  <header>页面头部</header>
-  <nav>导航</nav>
-  <footer>脚部</footer>
-  <section>板块</section>
-  <!--帖子,文章-->
-  <article>完整内容部分</article>
-  <!--与article相关-->
-  <aside>和主体相关附属信息</aside>
-  <!--<figcaption> 标签定义 <figure> 元素的标题.-->
-  <!--<figure>标签规定独立的流内容（图像、图表、照片、代码等等）。-->
-  <!--图片或视频-->
-  <figure></figure>
+  <form action="">
+    <input type="email">
+    <input type="tel">
+    <input type="url">
+    <input type="search">
+    <input type="range" step="2" min="0" value="10">
+    <input type="number">
+    <input type="color">
+    <input type="time">
+    <input type="datetime">
+    <input type="datetime-local">
+    <input type="date">
+    <input type="week">
+    <input type="mounth">
+    <input type="text"
+      placeholder=""
+      name="user"
+      autocomplete="off"
+      autofocus
+      value="hello"
+      required
+      pattern="\d{1,5}"
+      maxlength="5"
+      formnovalidate
+    >
+  </form>
+  <script>
+    var oTxt = document.getElementById('text')
+    oTxt.value = ''
+    oTxt.addEventListener('invalid', fn, false)
+
+    function fn(ev) {
+      alert(this.validity.customError)
+      ev.preventDefault()
+    }
+  </script>
 </body>
 </html>
