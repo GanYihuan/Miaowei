@@ -7,7 +7,7 @@
       p {
         width: 300px;
         border: 1px solid #000;
-        font: 12px/30px "宋体";
+        font: 12px/30px '宋体';
         padding: 10px;
       }
       /* 表示E元素中的第一行 */
@@ -25,13 +25,13 @@
       }
       /* 生成内容在E元素前 */
       p::before {
-        content: "ganyihuan";
+        content: 'ganyihuan';
         display: block;
         border: 1px solid #000;
       }
       /* 生成内容在E元素后 */
       p::after {
-        content: "nihao ";
+        content: 'nihao ';
       }
       /* 表示E元素不被匹配 */
       h1:not(.h2) {
