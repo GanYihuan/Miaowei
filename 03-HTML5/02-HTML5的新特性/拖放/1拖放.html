@@ -28,12 +28,10 @@
           aLi[i].ondragstart = function() {
             this.style.background = 'green'
           }
-
           aLi[i].ondrag = function() {
             // 开始与结束连续触发
             document.title = i++
           }
-
           aLi[i].ondragend = function() {
             this.style.background = 'yellow'
           }
@@ -42,18 +40,14 @@
         oDiv.ondragenter = function() {
           this.style.background = 'blue'
         }
-
         oDiv.ondragover = function(ev) {
           // enter 和 leave 之间连续触发
           // 要想触发 drop 事件，就 必须在 dragover 当中阻止默认事件
-          // document.title = i++;
           ev.preventDefault()
         }
-
         oDiv.ondragleave = function() {
           this.style.background = 'red'
         }
-
         oDiv.ondrop = function() {
           alert(123)
         }

@@ -35,7 +35,6 @@
             ev.dataTransfer.effectAllowed = 'link'
             ev.dataTransfer.setDragImage(oImg, 0, 0)
           }
-
           aLi[i].ondragend = function() {
             this.style.background = 'yellow'
           }
@@ -44,18 +43,15 @@
         oDiv.ondragenter = function() {
           this.style.background = 'blue'
         }
-
         oDiv.ondragover = function(ev) {
           //enter和leave之间连续触发
           //要想触发drop事件，就 必须在dragover当中阻止默认事件
           //document.title = i++;
           ev.preventDefault()
         }
-
         oDiv.ondragleave = function() {
           this.style.background = 'red'
         }
-
         oDiv.ondrop = function(ev) {}
       }
     </script>
