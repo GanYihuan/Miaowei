@@ -6,20 +6,22 @@
   </head>
   <body>
     <form action="www.baidu.com">
-      <input type="email">
-      <input type="tel">
-      <input type="url">
-      <input type="search">
-      <input type="range" step="2" min="0" value="10">
-      <input type="number">
-      <input type="color">
-      <input type="time">
-      <input type="datetime">
-      <input type="datetime-local">
-      <input type="date">
-      <input type="week">
-      <input type="mounth">
+      <input type="text" id="mingan">
+      <input type="email" />
+      <input type="tel" />
+      <input type="url" />
+      <input type="search" />
+      <input type="range" step="2" min="0" value="10" />
+      <input type="number" />
+      <input type="color" />
+      <input type="time" />
+      <input type="datetime" />
+      <input type="datetime-local" />
+      <input type="date" />
+      <input type="week" />
+      <input type="mounth" />
       <input
+        id="text"
         type="text"
         name="user"
         placeholder=""
@@ -37,22 +39,26 @@
     </form>
     <script>
       var oTxt = document.getElementById('text')
-      oText.value = '123456789'
+      var oMin = document.getElementById('mingan')
+      oTxt.value = '123456789'
       oTxt.addEventListener('invalid', fn, false)
 
       function fn(ev) {
         alert(this.validity.customError)
-        /* 以下属性放回 true, valid 则返回 false */
-        //  this.validity.valueMissing  值不存在时返回true
-        //  this.validity.typeMissing  值不匹配时返回true,如email
-        //  this.validity.pattemMissing  值不匹配正则表达式时返回true
-        //  this.validity.tooLong  值超过maxLength
-        //  this.validity.customError  不符合自定义验证返回true
+        //  this.validity.valueMissing  值不存在时返回 true
+        //  this.validity.typeMissing  值不匹配时返回 true
+        //  this.validity.pattemMissing  值不匹配正则表达式时返回 true
+        //  this.validity.tooLong  值超过 maxLength
+        //  this.validity.rangeUnderflow  验证 range 最小值
+        //  this.validity.rangeOverflow  验证 range 最大值
+        //  this.validity.stepMismatch  验证 range 当前值是否符合 min, max step 规则
+        //  this.validity.customError  不符合自定义验证返回 true
         ev.preventDefault()
       }
 
-      oTxt.oninput = function() {
+      oMin.oninput = function() {
         if (this.value === 'a') {
+          // setCustomValidity()  自定义验证
           this.setCustomValidity('敏感词')
         } else {
           setCustomValidity('')
