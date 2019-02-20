@@ -1,8 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>无标题文档</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
     <style>
       li {
         list-style: none;
@@ -23,40 +25,36 @@
         var oUl = document.getElementsByTagName('ul')[0]
         var aLi = oUl.getElementsByTagName('li')
         var oDiv = document.getElementById('div1')
+        var oImg = document.getElementById('img1')
         var i = 0
+
         for (var i = 0; i < aLi.length; i++) {
-          aLi[i].index = i
           aLi[i].ondragstart = function(ev) {
             var ev = ev || window.event
             // 解决火狐下的问题 必须设置 dataTransfer 对象才可以拖拽除图片外的其他标签
-            ev.dataTransfer.setData('name', this.index)
+            ev.dataTransfer.setData('name', 'hello')
             // 设置光标样式
             ev.dataTransfer.effectAllowed = 'link'
-            this.style.background = 'green'
-          }
-          aLi[i].ondrag = function() {
-            document.title = i++
+            ev.dataTransfer.setDragImage(oImg, 0, 0)
           }
           aLi[i].ondragend = function() {
             this.style.background = 'yellow'
           }
         }
+
         oDiv.ondragenter = function() {
           this.style.background = 'blue'
         }
         oDiv.ondragover = function(ev) {
-          // 要想触发 drop 事件，就 必须在 dragover 当中阻止默认事件
+          // enter 和 leave 之间连续触发
+          // 要想触发drop事件，就 必须在 dragover 当中阻止默认事件
+          // document.title = i++;
           ev.preventDefault()
         }
         oDiv.ondragleave = function() {
           this.style.background = 'red'
         }
-        oDiv.ondrop = function(ev) {
-          oUl.removeChild(aLi[ev.dataTransfer.getData('name')])
-          for (var i = 0; i < aLi.length; i++) {
-            aLi[i].index = i
-          }
-        }
+        oDiv.ondrop = function(ev) {}
       }
     </script>
   </head>
@@ -67,5 +65,6 @@
       <li draggable="true">c</li>
     </ul>
     <div id="div1"></div>
+    <img src="miaov.png" id="img1" style="display:none" />
   </body>
 </html>

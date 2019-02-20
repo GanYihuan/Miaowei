@@ -1,8 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>无标题文档</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
     <style>
       #div1 {
         width: 200px;
@@ -27,17 +29,11 @@
 
         oDiv.ondrop = function(ev) {
           ev.preventDefault()
-
           var fs = ev.dataTransfer.files
-
-          //alert(fs.length);
-
-          //alert( fs[0].type );
-
+          // alert(fs.length);
+          // alert( fs[0].type );
           var fd = new FileReader()
-
           fd.readAsDataURL(fs[0])
-
           fd.onload = function() {
             alert(this.result)
           }
@@ -45,7 +41,6 @@
       }
     </script>
   </head>
-
   <body>
     <div id="div1">将文件拖拽到此区域</div>
   </body>
