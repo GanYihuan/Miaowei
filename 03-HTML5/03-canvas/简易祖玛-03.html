@@ -49,7 +49,6 @@
           oGC.stroke();
 
           /*for(var i=0;i<ball.length;i++){
-          	
             oGC.beginPath();
             oGC.moveTo(ball[i].x,ball[i].y);
             oGC.arc(ball[i].x,ball[i].y,20,0*Math.PI/180,360*Math.PI/180,false);
@@ -66,27 +65,20 @@
         }, 1000 / 60);
 
         /*setInterval(function(){
-        	
           for(var i=0;i<ball.length;i++){
-          	
             ball[i].num++;
-          	
             if( ball[i].num == 270 ){
               ball[i].r = 150;
               ball[i].startX = 250;
               ball[i].startY = 50;
             }
-          	
             if( ball[i].num == 270 + 180 ){
               alert('游戏结束');
               window.location.reload();
             }
-          	
             ball[i].x = Math.sin(ball[i].num*Math.PI/180) * ball[i].r + ball[i].startX;
             ball[i].y = ball[i].r - Math.cos(ball[i].num*Math.PI/180) * ball[i].r + ball[i].startY;
-          	
           }
-        	
         },30);*/
 
         var ball = [];
