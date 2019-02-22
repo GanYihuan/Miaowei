@@ -33,19 +33,19 @@
         属性节点: 2
         文本节点: 3
         */
-        var oUl = document.getElementById("ul1");
-        alert(oUl.childNodes.length); // 11 (包含了6个空白节点, 5个元素节点)
-        alert(oUl.nodeType); // 1
-        alert(oUl.childNodes[0].nodeType); // 3
+        var oUl = document.getElementById('ul1')
+        alert(oUl.childNodes.length) // 11 (包含了6个空白节点, 5个元素节点)
+        alert(oUl.nodeType) // 1
+        alert(oUl.childNodes[0].nodeType) // 3
         // element.attributes: 只读属性, 属性列表集合
-        alert(oUl.attributes.length); // 2
-        alert(oUl.attributes[0].nodeType); // 2
+        alert(oUl.attributes.length) // 2
+        alert(oUl.attributes[0].nodeType) // 2
         for (let i = 0; i < oUl.childNodes.length; i++) {
           if (oUl.childNodes[i].nodeType === 1) {
-            oUl.childNodes[i].style.background = "red";
+            oUl.childNodes[i].style.background = 'red'
           }
         }
-      };
+      }
     </script>
   </body>
 </html>
