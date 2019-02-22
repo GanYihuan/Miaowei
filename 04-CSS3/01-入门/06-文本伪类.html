@@ -11,23 +11,23 @@
         padding: 10px;
       }
       /* 表示E元素中的第一行 */
-      p:first-line {
+      p::first-line {
         background: #f00;
       }
       /* 表示E元素中的第一个字符 */
-      p:first-letter {
+      p::first-letter {
         font-size: 30px;
       }
       /* 表示E元素在用户选中文字时 */
       p::selection {
-        background: orange;
         color: green;
+        background: orange;
       }
       /* 生成内容在E元素前 */
       p::before {
-        content: 'ganyihuan';
         display: block;
         border: 1px solid #000;
+        content: 'ganyihuan';
       }
       /* 生成内容在E元素后 */
       p::after {
