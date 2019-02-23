@@ -8,10 +8,10 @@
       第一种事件绑定形式的取消
       */
       function fn1() {
-        alert(1);
+        alert(1)
       }
       function fn2() {
-        alert(2);
+        alert(2)
       }
 
       // document.onclick = fn1;
@@ -28,10 +28,10 @@
       document.detachEvent('onclick', fn1);
       */
 
-      document.addEventListener("click", fn1, false);
-      document.addEventListener("click", fn1, true);
-      document.addEventListener("click", fn2, false);
-      document.removeEventListener("click", fn1, false);
+      document.addEventListener('click', fn1, false)
+      document.addEventListener('click', fn1, true)
+      document.addEventListener('click', fn2, false)
+      document.removeEventListener('click', fn1, false)
     </script>
   </head>
   <body></body>

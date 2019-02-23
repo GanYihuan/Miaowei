@@ -24,35 +24,35 @@
               非标准ie：全局捕获
         拖拽图片会有问题，原因，解决的办法同上
         */
-        var oDiv = document.getElementById("div1");
-        var oImg = document.getElementById("img1");
+        var oDiv = document.getElementById('div1')
+        var oImg = document.getElementById('img1')
 
         oImg.onmousedown = function(ev) {
-          var ev = ev || event;
-          var disX = ev.clientX - this.offsetLeft;
-          var disY = ev.clientY - this.offsetTop;
+          var ev = ev || event
+          var disX = ev.clientX - this.offsetLeft
+          var disY = ev.clientY - this.offsetTop
 
           if (oImg.setCapture) {
-            oImg.setCapture();
+            oImg.setCapture()
           }
 
           document.onmousemove = function(ev) {
-            var ev = ev || event;
-            oImg.style.left = ev.clientX - disX + "px";
-            oImg.style.top = ev.clientY - disY + "px";
-          };
+            var ev = ev || event
+            oImg.style.left = ev.clientX - disX + 'px'
+            oImg.style.top = ev.clientY - disY + 'px'
+          }
 
           document.onmouseup = function() {
-            document.onmousemove = document.onmouseup = null;
+            document.onmousemove = document.onmouseup = null
             // 释放全局捕获 releaseCapture();
             if (oImg.releaseCapture) {
-              oImg.releaseCapture();
+              oImg.releaseCapture()
             }
-          };
+          }
 
-          return false;
-        };
-      };
+          return false
+        }
+      }
     </script>
   </head>
 

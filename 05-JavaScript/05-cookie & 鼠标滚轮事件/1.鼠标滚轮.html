@@ -15,7 +15,7 @@
       鼠标滚轮事件
       */
       window.onload = function() {
-        var oDiv = document.getElementById("div1");
+        var oDiv = document.getElementById('div1')
         /*
         ie/chrome : onmousewheel
           event.wheelDelta
@@ -29,45 +29,44 @@
         addEventListener绑定的事件需要通过event下面的preventDefault();
         */
         // ie/chrome
-        oDiv.onmousewheel = fn;
+        oDiv.onmousewheel = fn
         // firefox
         if (oDiv.addEventListener) {
-          oDiv.addEventListener("DOMMouseScroll", fn, false);
+          oDiv.addEventListener('DOMMouseScroll', fn, false)
         }
         function fn(ev) {
-          var ev = ev || event;
-          var b = true;
+          var ev = ev || event
+          var b = true
           if (ev.wheelDelta) {
-            b = ev.wheelDelta > 0 ? true : false;
+            b = ev.wheelDelta > 0 ? true : false
           } else {
-            b = ev.detail < 0 ? true : false;
+            b = ev.detail < 0 ? true : false
           }
           if (b) {
-            this.style.height = this.offsetHeight - 10 + "px";
+            this.style.height = this.offsetHeight - 10 + 'px'
           } else {
-            this.style.height = this.offsetHeight + 10 + "px";
+            this.style.height = this.offsetHeight + 10 + 'px'
           }
           if (ev.preventDefault) {
-            ev.preventDefault();
+            ev.preventDefault()
           }
-          return false;
+          return false
         }
-
         /*
         document.oncontextmenu = function() {
           return false;
         }
         */
-        document.attachEvent("oncontextmenu", function() {
-          return false;
-        });
+        document.attachEvent('oncontextmenu', function() {
+          return false
+        })
         /*
         document.addEventListener('contextmenu', function(ev) {
           ev.preventDefault();
           return false;
         });
         */
-      };
+      }
     </script>
   </head>
 

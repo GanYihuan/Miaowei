@@ -7,10 +7,10 @@
       // 给一个对象绑定一个事件处理函数的第一种形式
       // obj.onclick = fn;
       function fn1() {
-        alert(this);
+        alert(this)
       }
       function fn2() {
-        alert(2);
+        alert(2)
       }
 
       // document.onclick = fn1;
@@ -48,15 +48,15 @@
 
       function bind(obj, evname, fn) {
         if (obj.addEventListener) {
-          obj.addEventListener(evname, fn, false);
+          obj.addEventListener(evname, fn, false)
         } else {
-          obj.attachEvent("on" + evname, function() {
-            fn.call(obj);
-          });
+          obj.attachEvent('on' + evname, function() {
+            fn.call(obj)
+          })
         }
       }
-      bind(document, "click", fn1);
-      bind(document, "click", fn2);
+      bind(document, 'click', fn1)
+      bind(document, 'click', fn2)
     </script>
   </head>
   <body></body>

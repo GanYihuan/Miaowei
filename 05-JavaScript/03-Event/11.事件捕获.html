@@ -21,12 +21,12 @@
     </style>
     <script>
       window.onload = function() {
-        var oDiv1 = document.getElementById("div1");
-        var oDiv2 = document.getElementById("div2");
-        var oDiv3 = document.getElementById("div3");
+        var oDiv1 = document.getElementById('div1')
+        var oDiv2 = document.getElementById('div2')
+        var oDiv3 = document.getElementById('div3')
 
         function fn1() {
-          alert(this.id);
+          alert(this.id)
         }
 
         /*
@@ -52,27 +52,27 @@
         */
 
         oDiv1.addEventListener(
-          "click",
+          'click',
           function() {
-            alert(1);
+            alert(1)
           },
           false
-        );
+        )
         oDiv1.addEventListener(
-          "click",
+          'click',
           function() {
-            alert(3);
+            alert(3)
           },
           true
-        );
+        )
         oDiv3.addEventListener(
-          "click",
+          'click',
           function() {
-            alert(2);
+            alert(2)
           },
           false
-        );
-      };
+        )
+      }
     </script>
   </head>
   <body>
