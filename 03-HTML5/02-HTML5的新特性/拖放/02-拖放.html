@@ -31,10 +31,8 @@
           aLi[i].index = i
           aLi[i].ondragstart = function(ev) {
             let ev = ev || window.event
-            // 解决火狐下的问题 必须设置 dataTransfer 对象才可以拖拽除图片外的其他标签
-            ev.dataTransfer.setData('name', this.index)
-            // 设置光标样式
-            ev.dataTransfer.effectAllowed = 'link'
+            ev.dataTransfer.setData('name', this.index) // 解决火狐下的问题 必须设置 dataTransfer 对象才可以拖拽除图片外的其他标签
+            ev.dataTransfer.effectAllowed = 'link' // 设置光标样式
             this.style.background = 'green'
           }
           aLi[i].ondrag = function() {
@@ -48,8 +46,7 @@
           this.style.background = 'blue'
         }
         oDiv.ondragover = function(ev) {
-          // 要想触发 drop 事件，就 必须在 dragover 当中阻止默认事件
-          ev.preventDefault()
+          ev.preventDefault() // 要想触发 drop 事件，就 必须在 dragover 当中阻止默认事件
         }
         oDiv.ondragleave = function() {
           this.style.background = 'red'
